@@ -1,0 +1,8 @@
+trajin ../md_4.nc
+reference equil.rst
+strip :WAT,Cl-,Na+
+rms reference mass out WTbackbone_rmsd_md_4.dat @CA,C,N
+atomicfluct out backbone_rmsf_mdQWT_4.txt @CA,C,N byres
+distance dist_atom_1528_4624 @1528 @4624 out distance_atom_1528_4624md_4.dat
+run
+quit

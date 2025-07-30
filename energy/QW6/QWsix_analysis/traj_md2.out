@@ -1,0 +1,77 @@
+
+CPPTRAJ: Trajectory Analysis. V6.18.1 (AmberTools) OpenMP
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| 64 OpenMP threads available.
+| Date/time: 05/17/25 14:58:11
+| Available memory: 142.505 GB
+
+	Reading './V149G_solvated.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+INPUT: Reading input from 'traj_md2.in'
+  [trajin ../md_2.nc]
+	Reading '../md_2.nc' as Amber NetCDF
+  [reference ../equil.rst]
+	Reading '../equil.rst' as Amber NC Restart
+	Setting active reference for distance-based masks: 'equil.rst'
+  [strip :WAT,Cl-,Na+]
+    STRIP: Stripping atoms in mask [:WAT,Cl-,Na+]
+  [distance dist_atom_1526_4611 @1526 @4611 out distance_atom_O_C_md2.dat]
+    DISTANCE: @1526 to @4611, center of mass.
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: V149G_solvated.prmtop, 51665 atoms, 12076 res, box: Orthorhombic, 11761 mol, 11759 solvent
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'md_2.nc' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, box, Parm V149G_solvated.prmtop (Orthorhombic box) (reading 50000 of 50000)
+  Coordinate processing will occur on 50000 frames.
+
+REFERENCE FRAMES (1 total):
+    0: equil.rst:1
+	Active reference frame for distance-based masks is 'default_name'
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'V149G_solvated.prmtop' (2 actions):
+  0: [strip :WAT,Cl-,Na+]
+	Stripping 47036 atoms.
+	Stripped topology: 4629 atoms, 317 res, box: Orthorhombic, 2 mol
+  1: [distance dist_atom_1526_4611 @1526 @4611 out distance_atom_O_C_md2.dat]
+	@1526 (1 atoms) to @4611 (1 atoms), imaged.
+----- md_2.nc (1-50000, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 50000 frames and processed 50000 frames.
+TIME: Avg. throughput= 894.1484 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (1 total):
+	dist_atom_1526_4611 "dist_atom_1526_4611" (double, distance), size is 50000 (400.000 kB)
+    Total data set memory usage is at least 400.000 kB
+
+DATAFILES (1 total):
+  distance_atom_O_C_md2.dat (Standard Data File):  dist_atom_1526_4611
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 55.9191 s ( 99.94%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0323 s (  0.06%)
+TIME:		Other              : 0.0002 s (  0.00%)
+TIME:	Run Total 55.9517 s
+---------- RUN END ---------------------------------------------------
+  [quit]
+TIME: Total execution time: 56.1643 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+

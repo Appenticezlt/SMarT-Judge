@@ -1,0 +1,6 @@
+trajin ../md_4.nc
+reference ../equil.rst
+strip :WAT,Cl-,Na+
+distance dist_atom_1528_4628 @1528 @4628 out distance_atom_O_C_md4.dat
+run
+quit

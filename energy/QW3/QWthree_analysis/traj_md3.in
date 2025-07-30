@@ -1,0 +1,6 @@
+trajin ../md_3.nc
+reference ../equil.rst
+strip :WAT,Cl-,Na+
+distance dist_atom_1528_4637 @1528 @4637 out QWthreedistance_atom_O_Cmd3.dat
+run
+quit

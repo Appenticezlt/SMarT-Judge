@@ -1,0 +1,6 @@
+Using topology: ./Complex_solvated.prmtop
+Running cpptraj for md_1.nc → QWthreedistance_atom_O_Cmd1.dat
+Running cpptraj for md_2.nc → QWthreedistance_atom_O_Cmd2.dat
+Running cpptraj for md_3.nc → QWthreedistance_atom_O_Cmd3.dat
+Running cpptraj for md_4.nc → QWthreedistance_atom_O_Cmd4.dat
+All cpptraj tasks finished.

@@ -1,0 +1,16 @@
+
+CPPTRAJ: Trajectory Analysis. V6.18.1 (AmberTools) OpenMP
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| 64 OpenMP threads available.
+| Date/time: 05/17/25 14:40:32
+| Available memory: 203.148 GB
+
+	Reading './Complex_solvated.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+INPUT: Reading input from 'traj_md4.in'
+  [trajin ../md_4.nc]
+TIME: Total execution time: 0.1277 seconds.
+

@@ -1,8 +1,0 @@
-Error: '../md_3.nc': No such file or directory
-Error: '../md_4.nc': No such file or directory
-Error: Could not set up input trajectory '../md_3.nc'.
-Error: Could not set up input trajectory '../md_4.nc'.
-	1 errors encountered reading input.
-	1 errors encountered reading input.
-Error: Error(s) occurred during execution.
-Error: Error(s) occurred during execution.

@@ -1,0 +1,96 @@
+
+CPPTRAJ: Trajectory Analysis. V6.18.1 (AmberTools) OpenMP
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| 64 OpenMP threads available.
+| Date/time: 05/15/25 23:17:02
+| Available memory: 278.118 GB
+
+	Reading './Complex_solvated.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+INPUT: Reading input from 'traj_md.in'
+  [trajin ../md_2.nc]
+	Reading '../md_2.nc' as Amber NetCDF
+  [reference ../equil.rst]
+	Reading '../equil.rst' as Amber NC Restart
+	Setting active reference for distance-based masks: 'equil.rst'
+  [strip :WAT,Cl-,Na+]
+    STRIP: Stripping atoms in mask [:WAT,Cl-,Na+]
+  [rms reference mass out QWonebackbone_rmsd_md_2.dat @CA,C,N]
+    RMSD: (@CA,C,N), reference is "default_name" (@CA,C,N), mass-weighted.
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+  [atomicfluct out backbone_rmsf_mdQWone_2.txt @CA,C,N byres]
+    ATOMICFLUCT: calculating atomic positional fluctuations over residues.
+	Output to file backbone_rmsf_mdQWone_2.txt
+	Atom mask: [@CA,C,N]
+	Start: 1  Stop: Final frame
+  [distance dist_atom_1528_4624 @1528 @4624 out distance_atom_1528_4624QWonemd_2.dat]
+    DISTANCE: @1528 to @4624, center of mass.
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: Complex_solvated.prmtop, 51666 atoms, 12074 res, box: Orthorhombic, 11759 mol, 11757 solvent
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'md_2.nc' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, box, Parm Complex_solvated.prmtop (Orthorhombic box) (reading 25000 of 25000)
+  Coordinate processing will occur on 25000 frames.
+
+REFERENCE FRAMES (1 total):
+    0: equil.rst:1
+	Active reference frame for distance-based masks is 'default_name'
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'Complex_solvated.prmtop' (4 actions):
+  0: [strip :WAT,Cl-,Na+]
+	Stripping 47028 atoms.
+	Stripped topology: 4638 atoms, 317 res, box: Orthorhombic, 2 mol
+  1: [rms reference mass out QWonebackbone_rmsd_md_2.dat @CA,C,N]
+	Target mask: [@CA,C,N](950)
+	Reference topology: Complex_solvated.prmtop
+	Reference mask: [@CA,C,N](950)
+  2: [atomicfluct out backbone_rmsf_mdQWone_2.txt @CA,C,N byres]
+	Mask [@CA,C,N] corresponds to 950 atoms.
+  3: [distance dist_atom_1528_4624 @1528 @4624 out distance_atom_1528_4624QWonemd_2.dat]
+	@1528 (1 atoms) to @4624 (1 atoms), imaged.
+----- md_2.nc (1-25000, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 25000 frames and processed 25000 frames.
+TIME: Avg. throughput= 979.9199 frames / second.
+
+ACTION OUTPUT:
+    ATOMICFLUCT: Calculating fluctuations for 25000 sets.
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (3 total):
+	RMSD_00002 "RMSD_00002" (double, rms), size is 25000 (200.000 kB)
+	Fluct_00003 "AtomicFlx" (X-Y mesh), size is 317 (5.072 kB)
+	dist_atom_1528_4624 "dist_atom_1528_4624" (double, distance), size is 25000 (200.000 kB)
+    Total data set memory usage is at least 405.072 kB
+
+DATAFILES (3 total):
+  QWonebackbone_rmsd_md_2.dat (Standard Data File):  RMSD_00002
+  backbone_rmsf_mdQWone_2.txt (Standard Data File):  AtomicFlx
+  distance_atom_1528_4624QWonemd_2.dat (Standard Data File):  dist_atom_1528_4624
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 25.5123 s ( 99.66%)
+TIME:		Action Post        : 0.0001 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0863 s (  0.34%)
+TIME:		Other              : 0.0004 s (  0.00%)
+TIME:	Run Total 25.5991 s
+---------- RUN END ---------------------------------------------------
+  [quit]
+TIME: Total execution time: 25.7437 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+

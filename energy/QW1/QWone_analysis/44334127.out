@@ -1,0 +1,6 @@
+Using topology: ./Complex_solvated.prmtop
+Running cpptraj for md_1.nc → distance_atom_O_C_md1.dat
+Running cpptraj for md_2.nc → distance_atom_O_C_md2.dat
+Running cpptraj for md_3.nc → distance_atom_O_C_md3.dat
+Running cpptraj for md_4.nc → distance_atom_O_C_md4.dat
+All cpptraj tasks finished.
